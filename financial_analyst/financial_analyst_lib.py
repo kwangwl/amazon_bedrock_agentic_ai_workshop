@@ -1,7 +1,7 @@
 import boto3
 
 
-def get_agent_response(prompt_id, variable_key, variable_value):
+def get_prompt_management_response(prompt_id, variable_key, variable_value):
     """Get a response from the Bedrock Prompt Management using specified parameters."""
 
     # Create a Boto3 client for the Bedrock Runtime service
