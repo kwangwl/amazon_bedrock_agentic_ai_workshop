@@ -104,10 +104,6 @@ def display_portfolio_suggestion(place_holder, input_content):
     place_holder.markdown("**상세 근거**")
     place_holder.write(data["reason"])
 
-def load_default_value():
-    with open('../dataset/json/default_portfolio_analysis.json', 'r', encoding='utf-8') as f:
-        return f.read()
-
 # Page setup
 st.set_page_config(page_title="Portfolio Architect")
 
@@ -121,8 +117,7 @@ st.markdown("**재무 분석 결과 입력(🤖 Financial Analyst)**")
 
 financial_analysis = st.text_area(
     "JSON 형식",
-    height=200,
-    value=load_default_value()
+    height=200
 )
 
 submitted = st.button("분석 시작", use_container_width=True)
