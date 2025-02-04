@@ -77,8 +77,6 @@ def display_risk_analysis(place_holder, input_content):
         with sub_col2:
             st.markdown("**조정 이유 및 전략**")
             st.info(data[scenario]["reason"])
-        
-        place_holder.markdown("---")
 
 # Page setup
 st.set_page_config(page_title="Risk Manager")
