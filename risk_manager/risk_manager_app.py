@@ -6,44 +6,37 @@ import plotly.express as px
 import pandas as pd
 import os
 import uuid
+import itertools
 
 # Config
 RISK_MANAGER_AGENT_ID = ""
 RISK_MANAGER_AGENT_ALIAS_ID = ""
 
 # Functions
-def display_product_news(trace_container, trace):
-    """Display news for investment products"""
-    news_text = trace.get('observation', {}).get('actionGroupInvocationOutput', {}).get('text')
-    news = json.loads(news_text)
-    
-    trace_container.markdown(f"**{news['ticker']} 관련 뉴스**")
-    for item in news['news']:
-        trace_container.markdown(f"**{item['title']}**")
-        trace_container.markdown(f"*{item['publish_date']}*")
-        trace_container.markdown(item['summary'])
-        trace_container.markdown("---")
-
 def display_market_data(trace_container, trace):
     """Display market data"""
     data_text = trace.get('observation', {}).get('actionGroupInvocationOutput', {}).get('text')
-    data = json.loads(data_text)
+    market_data = json.loads(data_text)
     
-    df = pd.DataFrame(
-        [[key, value['description'], value['value']] for key, value in data.items()],
-        columns=['지표', '설명', '값']
-    )
+    trace_container.markdown("**주요 시장 지표**")
+    for i in range(0, len(market_data), 3):
+        cols = trace_container.columns(3)
+        for j, (key, info) in enumerate(itertools.islice(market_data.items(), i, i + 3)):
+            with cols[j]:
+                st.metric(info['description'], f"{info['value']}")
+
+def display_product_news(trace_container, trace):
+    """Display news for investment products"""
+    news_text = trace.get('observation', {}).get('actionGroupInvocationOutput', {}).get('text')
+    news_data = json.loads(news_text)
     
-    trace_container.markdown("**시장 지표**")
+    ticker = news_data["ticker"]
+    trace_container.markdown(f"**{ticker} 최근 뉴스**")
+    news_df = pd.DataFrame(news_data["news"])
     trace_container.dataframe(
-        df,
-        use_container_width=True,
+        news_df[['publish_date', 'title', 'summary']],
         hide_index=True,
-        column_config={
-            "지표": st.column_config.TextColumn(width="medium"),
-            "설명": st.column_config.TextColumn(width="large"),
-            "값": st.column_config.NumberColumn(width="small")
-        }
+        use_container_width=True
     )
 
 def create_pie_chart(data, chart_title=""):
@@ -138,11 +131,11 @@ if submitted and portfolio_composition:
                             st.markdown(trace['rationale']['text'])
                     
                     elif function_name != "":
-                        if function_name == "get_product_news":
-                            display_product_news(placeholder, trace)
-                        elif function_name == "get_market_data":
+                        if function_name == "get_market_data":
                             display_market_data(placeholder, trace)
-                        
+                        elif function_name == "get_product_news":
+                            display_product_news(placeholder, trace)
+
                         function_name = ""
                     
                     else:
