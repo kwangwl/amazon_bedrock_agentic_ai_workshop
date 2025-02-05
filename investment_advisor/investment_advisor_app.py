@@ -1,4 +1,4 @@
-import ai_pb_lib as plib
+import investment_advisor_lib as ilib
 import json
 import streamlit as st
 import plotly.graph_objects as go
@@ -213,7 +213,7 @@ st.set_page_config(page_title="Agentic AI 프라이빗 뱅커")
 st.title("🤖 Agentic AI 프라이빗 뱅커")
 
 with st.expander("아키텍처", expanded=True):
-    st.image(os.path.join("static", "agentic_ai_arch.png"))
+    st.image(os.path.join("../dataset/images/investment_advisor.png"))
 
 # Input form
 st.markdown("**📊 투자자 정보**")
@@ -274,7 +274,7 @@ if submitted:
     placeholder = st.container()
 
     with st.spinner("AI가 분석 중입니다..."):
-        response = plib.get_flow_response(input_data, FLOW_ID, FLOW_ALIAS_ID)
+        response = ilib.get_flow_response(input_data, FLOW_ID, FLOW_ALIAS_ID)
 
         if response:
             placeholder.divider()
