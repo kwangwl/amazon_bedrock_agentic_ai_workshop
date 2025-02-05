@@ -208,9 +208,9 @@ NODE_DISPLAY_FUNCTIONS = {
 
 
 # Page setup
-st.set_page_config(page_title="Agentic AI 프라이빗 뱅커")
+st.set_page_config(page_title="Investment Advisor")
 
-st.title("🤖 Agentic AI 프라이빗 뱅커")
+st.title("🤖 Investment Advisor")
 
 with st.expander("아키텍처", expanded=True):
     st.image(os.path.join("../dataset/images/investment_advisor.png"))
