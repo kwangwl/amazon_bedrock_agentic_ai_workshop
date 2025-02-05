@@ -12,8 +12,8 @@ import os
 
 
 # Config
-FLOW_ID = os.environ.get("BWB_FLOW_ID")
-FLOW_ALIAS_ID = os.environ.get("BWB_FLOW_ALIAS_ID")
+FLOW_ID = ""
+FLOW_ALIAS_ID = ""
 
 # Functions
 def create_pie_chart(data, chart_title=""):
@@ -274,7 +274,7 @@ if submitted:
     placeholder = st.container()
 
     with st.spinner("AI가 분석 중입니다..."):
-        response = plib.get_flow_response(input_data, FLOW_ID, FLOW_ALIAS_ID, BEDROCK_REGION_NAME)
+        response = plib.get_flow_response(input_data, FLOW_ID, FLOW_ALIAS_ID)
 
         if response:
             placeholder.divider()
