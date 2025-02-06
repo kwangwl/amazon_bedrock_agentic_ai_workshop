@@ -42,7 +42,8 @@ def get_response(user_question):
     response = bedrock.converse(
         modelId='anthropic.claude-3-5-sonnet-20240620-v1:0',
         messages=[{"role": "user", "content": [{"text": user_question}]}],
-        toolConfig=tool_config
+        toolConfig=tool_config,
+        inferenceConfig={"maxTokens": 2000,  "temperature": 0.0}
     )
     return response
 

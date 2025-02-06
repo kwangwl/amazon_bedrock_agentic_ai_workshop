@@ -6,14 +6,8 @@ def get_bedrock_response(prompt, model_id):
 
     response = bedrock.converse(
         modelId=model_id,
-        messages=[{
-            "role": "user",
-            "content": [{"text": prompt}]
-        }],
-        inferenceConfig={
-            "maxTokens": 2000,
-            "temperature": 0.0
-        }
+        messages=[{"role": "user", "content": [{"text": prompt}]}],
+        inferenceConfig={"maxTokens": 2000,  "temperature": 0.0}
     )
 
     return response['output']['message']['content'][0]['text']
