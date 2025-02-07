@@ -84,7 +84,7 @@ st.set_page_config(page_title="Risk Manager")
 st.title("🤖 Risk Manager")
 
 with st.expander("아키텍처", expanded=True):
-    st.image(os.path.join("../dataset/images/risk_manager.png"))
+    st.image(os.path.join("../../dataset/images/risk_manager.png"))
 
 # Input form
 st.markdown("**포트폴리오 구성 입력(🤖 Portfolio Architect)**")

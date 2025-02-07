@@ -213,7 +213,7 @@ st.set_page_config(page_title="Investment Advisor")
 st.title("🤖 Investment Advisor")
 
 with st.expander("아키텍처", expanded=True):
-    st.image(os.path.join("../dataset/images/investment_advisor.png"))
+    st.image(os.path.join("../../dataset/images/investment_advisor.png"))
 
 # Input form
 st.markdown("**📊 투자자 정보**")

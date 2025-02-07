@@ -37,7 +37,7 @@ st.set_page_config(page_title="Financial Analyst")
 st.title("🤖 Financial Analyst")
 
 with st.expander("아키텍처", expanded=True):
-    st.image(os.path.join("../dataset/images/financial_analyst.png"))
+    st.image(os.path.join("../../dataset/images/financial_analyst.png"))
 
 # Input form
 st.markdown("**투자자 정보 입력**")

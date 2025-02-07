@@ -110,7 +110,7 @@ st.set_page_config(page_title="Portfolio Architect")
 st.title("🤖 Portfolio Architect")
 
 with st.expander("아키텍처", expanded=True):
-    st.image(os.path.join("../dataset/images/portfolio_architect.png"))
+    st.image(os.path.join("../../dataset/images/portfolio_architect.png"))
 
 # Input form
 st.markdown("**재무 분석 결과 입력(🤖 Financial Analyst)**")
