@@ -61,8 +61,8 @@ def display_risk_analysis(place_holder, input_content):
     """Display risk analysis results"""
     data = json.loads(input_content, strict=False)
     
-    for scenario in ["scenario1", "scenario2"]:
-        place_holder.subheader(f"Scenario: {data[scenario]['name']}")
+    for i, scenario in enumerate(["scenario1", "scenario2"], 1):
+        place_holder.subheader(f"Scenario {i}: {data[scenario]['name']}")
         place_holder.markdown(data[scenario]['description'])
         
         sub_col1, sub_col2 = place_holder.columns([1, 1])
