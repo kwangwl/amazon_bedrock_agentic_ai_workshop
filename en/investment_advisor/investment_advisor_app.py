@@ -216,23 +216,22 @@ with st.expander("Architecture", expanded=True):
     st.image(os.path.join("../../dataset/images/investment_advisor.png"))
 
 # Input form
-st.markdown("**📊 Investor Information**")
+st.markdown("**Enter Investor Information**")
 col1, col2, col3 = st.columns(3)
 
 with col1:
     total_investable_amount = st.number_input(
-        "💰 Total Investable Amount (in $10,000)",
-        min_value=0.0,
-        max_value=10000.0,
-        value=150.0,
-        step=1.0,
-        format="%.1f"
+        "💰 Total Investable Amount (in USD)",
+        min_value=0,
+        max_value=10000000,
+        value=50000,
+        step=1000,
+        format="%d"
     )
-    st.caption("Example: 150.0 = $1,500,000")
+    st.caption("Example: 50000 = $50,000")
 
 with col2:
-    age_options = [f"{i}-{i + 4} years" for i in range(20, 101, 5)]
-
+    age_options = [f"{i}-{i+4} years" for i in range(20, 101, 5)]
     age = st.selectbox(
         "Age",
         options=age_options,
@@ -241,33 +240,30 @@ with col2:
 
 with col3:
     experience_categories = ["0-1 year", "1-3 years", "3-5 years", "5-10 years", "10-20 years", "20+ years"]
-
     stock_investment_experience_years = st.selectbox(
         "Stock Investment Experience",
         options=experience_categories,
         index=3
     )
 
-st.markdown("**🎯 Investment Goal**")
-
 target_amount = st.number_input(
-    "💰Target Amount After 1 Year (in $10,000)",
-    min_value=0.0,
-    max_value=10000.0,
-    value=200.0,
-    step=1.0,
-    format="%.1f"
+    "💰 Target Amount After 1 Year (in USD)",
+    min_value=0,
+    max_value=10000000,
+    value=70000,
+    step=1000,
+    format="%d"
 )
-st.caption("Example: 200.0 = $2,000,000")
+st.caption("Example: 70000 = $70,000")
 
 submitted = st.button("Start Analysis", use_container_width=True)
 
 if submitted:
     input_data = {
-        "total_investable_amount": int(total_investable_amount * 10000),
+        "total_investable_amount": total_investable_amount,
         "age": age,
         "stock_investment_experience_years": stock_investment_experience_years,
-        "target_amount": int(target_amount * 10000),
+        "target_amount": target_amount,
     }
 
     # Output response
