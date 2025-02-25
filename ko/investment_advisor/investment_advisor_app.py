@@ -178,8 +178,18 @@ def display_risk_analysis(place_holder, input_content):
             st.markdown(f"{ticker} 최근 뉴스")
             news_data = get_product_news(ticker)
             news_df = pd.DataFrame(news_data["news"])
-            st.dataframe(news_df[['publish_date', 'title', 'summary']], hide_index=True)
-
+            
+            required_columns = ['publish_date', 'title', 'summary']
+            for col in required_columns:
+                if col not in news_df.columns:
+                    news_df[col] = ''
+                        
+            columns_to_display = [col for col in required_columns if col in news_df.columns]
+            
+            if columns_to_display:
+                st.dataframe(news_df[columns_to_display], hide_index=True)
+            else:
+                st.write("No news data available")
 
 def display_report(place_holder, input_content):
     """Display report function"""

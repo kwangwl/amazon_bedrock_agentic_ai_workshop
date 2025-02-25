@@ -178,8 +178,18 @@ def display_risk_analysis(place_holder, input_content):
             st.markdown(f"{ticker} Recent News")
             news_data = get_product_news(ticker)
             news_df = pd.DataFrame(news_data["news"])
-            st.dataframe(news_df[['publish_date', 'title', 'summary']], hide_index=True)
 
+            required_columns = ['publish_date', 'title', 'summary']
+            for col in required_columns:
+                if col not in news_df.columns:
+                    news_df[col] = ''
+                        
+            columns_to_display = [col for col in required_columns if col in news_df.columns]
+            
+            if columns_to_display:
+                st.dataframe(news_df[columns_to_display], hide_index=True)
+            else:
+                st.write("No news data available")
 
 def display_report(place_holder, input_content):
     """Display report function"""
@@ -210,7 +220,7 @@ NODE_DISPLAY_FUNCTIONS = {
 # Page setup
 st.set_page_config(page_title="Investment Advisor")
 
-st.title("🤖 Investment Advisor")
+st.title("🤖 AI Investment Advisor")
 
 with st.expander("Architecture", expanded=True):
     st.image(os.path.join("../../dataset/images/investment_advisor.png"))
