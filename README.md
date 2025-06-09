@@ -5,7 +5,7 @@ This repository contains practice code for the AWS Bedrock Agentic AI Workshop. 
 > 🔗 **[Amazon Bedrock Agentic AI Workshop - AI Investment Advisor](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US)**  
 > Access the detailed workshop guide on AWS Workshop Studio. Find step-by-step instructions for each Lab.
 
-![AWS Workshop](dataset/images/concept.png)](dataset/images/concept.png)
+<img src="dataset/images/concept.png" width="70%" alt="Agentic AI Workshop Overview">
 
 **Architecture**
 
@@ -50,6 +50,8 @@ Each Lab implements a core pattern of Agentic AI:
 ```
 
 ### Lab 1: Financial Analyst
+<img src="dataset/images/lab1_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
+
 **Pattern: Reflection**
 
 Practice Contents:
@@ -60,6 +62,8 @@ Practice Contents:
 > [Lab 1 Guide](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US/app/lab1)
 
 ### Lab 2: Portfolio Architect
+<img src="dataset/images/lab2_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
+
 **Pattern: Tool use**
 
 Practice Contents:
@@ -70,6 +74,8 @@ Practice Contents:
 > [Lab 2 Guide](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US/app/lab2)
 
 ### Lab 3: Risk Manager
+<img src="dataset/images/lab3_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
+
 **Pattern: Planning**
 
 Practice Contents:
@@ -80,6 +86,8 @@ Practice Contents:
 > [Lab 3 Guide](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US/app/lab3)
 
 ### Lab 4: Investment Advisor
+<img src="dataset/images/lab4_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
+
 **Pattern: Multi Agent**
 
 Practice Contents:
@@ -138,7 +146,7 @@ aws configure
 > 🔗 **[Amazon Bedrock Agentic AI Workshop - AI Investment Advisor](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2)**  
 > AWS Workshop Studio에서 제공되는 상세 실습 가이드입니다. 각 Lab의 단계별 설명을 확인할 수 있습니다.
 
-![AWS Workshop](dataset/images/concept.png)](dataset/images/concept.png)
+<img src="dataset/images/concept.png" width="70%" alt="Agentic AI Workshop Overview">
 
 **아키텍처**
 
@@ -183,6 +191,8 @@ aws configure
 ```
 
 ### Lab 1: 재무 분석가 (Financial Analyst)
+<img src="dataset/images/lab1_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
+
 **패턴: Reflection**
 
 실습 내용:
@@ -193,6 +203,8 @@ aws configure
 > [Lab 1 실습 가이드](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/ko-KR/app/lab1)
 
 ### Lab 2: 포트폴리오 설계사 (Portfolio Architect)
+<img src="dataset/images/lab2_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
+
 **패턴: Tool use**
 
 실습 내용:
@@ -203,6 +215,8 @@ aws configure
 > [Lab 2 실습 가이드](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/ko-KR/app/lab2)
 
 ### Lab 3: 리스크 관리사 (Risk Manager)
+<img src="dataset/images/lab3_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
+
 **패턴: Planning**
 
 실습 내용:
@@ -213,6 +227,8 @@ aws configure
 > [Lab 3 실습 가이드](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/ko-KR/app/lab3)
 
 ### Lab 4: 투자 어드바이저 (Investment Advisor)
+<img src="dataset/images/lab4_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
+
 **패턴: Multi Agent**
 
 실습 내용:
