@@ -5,7 +5,7 @@ This repository contains practice code for the AWS Bedrock Agentic AI Workshop. 
 > 🔗 **[Amazon Bedrock Agentic AI Workshop - AI Investment Advisor](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US)**  
 > Access the detailed workshop guide on AWS Workshop Studio. Find step-by-step instructions for each Lab.
 
-<img src="dataset/images/concept.png" width="70%" alt="Agentic AI Workshop Overview">
+![Architecture](dataset/images/concept.png)
 
 **Architecture**
 
@@ -50,6 +50,8 @@ Each Lab implements a core pattern of Agentic AI:
 ```
 
 ### Lab 1: Financial Analyst
+> [Lab 1 Guide](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US/app/lab1)
+
 <img src="dataset/images/lab1_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
 
 **Pattern: Reflection**
@@ -59,9 +61,9 @@ Practice Contents:
 2. Result verification using Claude
 3. Lambda function configuration and testing
 
-> [Lab 1 Guide](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US/app/lab1)
-
 ### Lab 2: Portfolio Architect
+> [Lab 2 Guide](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US/app/lab2)
+
 <img src="dataset/images/lab2_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
 
 **Pattern: Tool use**
@@ -71,9 +73,9 @@ Practice Contents:
 2. S3 data store configuration
 3. Bedrock Agent creation and setup
 
-> [Lab 2 Guide](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US/app/lab2)
-
 ### Lab 3: Risk Manager
+> [Lab 3 Guide](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US/app/lab3)
+
 <img src="dataset/images/lab3_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
 
 **Pattern: Planning**
@@ -83,9 +85,9 @@ Practice Contents:
 2. Scenario planning prompt design
 3. Risk analysis system construction
 
-> [Lab 3 Guide](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US/app/lab3)
-
 ### Lab 4: Investment Advisor
+> [Lab 4 Guide](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US/app/lab4)
+
 <img src="dataset/images/lab4_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
 
 **Pattern: Multi Agent**
@@ -94,8 +96,6 @@ Practice Contents:
 1. Bedrock Flow configuration
 2. Guardrails setup
 3. Complete system integration
-
-> [Lab 4 Guide](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/en-US/app/lab4)
 
 ## 🎯 Target Audience
 
@@ -146,7 +146,7 @@ aws configure
 > 🔗 **[Amazon Bedrock Agentic AI Workshop - AI Investment Advisor](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2)**  
 > AWS Workshop Studio에서 제공되는 상세 실습 가이드입니다. 각 Lab의 단계별 설명을 확인할 수 있습니다.
 
-<img src="dataset/images/concept.png" width="70%" alt="Agentic AI Workshop Overview">
+![Architecture](dataset/images/concept.png)
 
 **아키텍처**
 
@@ -191,6 +191,8 @@ aws configure
 ```
 
 ### Lab 1: 재무 분석가 (Financial Analyst)
+> [Lab 1 실습 가이드](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/ko-KR/app/lab1)
+
 <img src="dataset/images/lab1_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
 
 **패턴: Reflection**
@@ -200,9 +202,9 @@ aws configure
 2. Claude를 활용한 분석 결과 검증
 3. Lambda 함수 구성 및 테스트
 
-> [Lab 1 실습 가이드](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/ko-KR/app/lab1)
-
 ### Lab 2: 포트폴리오 설계사 (Portfolio Architect)
+> [Lab 2 실습 가이드](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/ko-KR/app/lab2)
+
 <img src="dataset/images/lab2_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
 
 **패턴: Tool use**
@@ -212,9 +214,9 @@ aws configure
 2. S3 데이터 저장소 구성
 3. Bedrock Agent 생성 및 설정
 
-> [Lab 2 실습 가이드](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/ko-KR/app/lab2)
-
 ### Lab 3: 리스크 관리사 (Risk Manager)
+> [Lab 3 실습 가이드](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/ko-KR/app/lab3)
+
 <img src="dataset/images/lab3_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
 
 **패턴: Planning**
@@ -224,9 +226,9 @@ aws configure
 2. 시나리오 플래닝 프롬프트 설계
 3. 리스크 분석 시스템 구축
 
-> [Lab 3 실습 가이드](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/ko-KR/app/lab3)
-
 ### Lab 4: 투자 어드바이저 (Investment Advisor)
+> [Lab 4 실습 가이드](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/ko-KR/app/lab4)
+
 <img src="dataset/images/lab4_architecture.png" width="70%" alt="Agentic AI Workshop Overview">
 
 **패턴: Multi Agent**
@@ -235,8 +237,6 @@ aws configure
 1. Bedrock Flow 구성
 2. Guardrails 설정
 3. 전체 시스템 통합
-
-> [Lab 4 실습 가이드](https://catalog.us-east-1.prod.workshops.aws/workshops/5d74d234-0149-4b82-982a-4c040b85d0f2/ko-KR/app/lab4)
 
 ## 🎯 대상
 
