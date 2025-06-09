@@ -13,7 +13,7 @@ This repository contains practice code for the AWS Bedrock Agentic AI Workshop. 
 
 **Expected Output**
 
-![AI Advisor Output](dataset/images/output.ko.png)
+![AI Advisor Output](dataset/images/output.en.png)
 
 ## 📋 Workshop Overview
 
